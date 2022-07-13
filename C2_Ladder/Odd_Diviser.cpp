@@ -18,7 +18,6 @@ int main()
         {
             if(n==pow(2,i))
             {
-                cout<<"I am in if       "<<i<<endl;
                 flag=1;
                 break;
             }
