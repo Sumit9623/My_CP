@@ -11,7 +11,12 @@ int main()
     cin>>t;
     while(t--)
     {
-       
+       int x,y,z,breaks;
+       cin>>x>>y>>z;
+       if(x%3==0) breaks=x/3-1;
+       else breaks=x/3;
+       if(breaks<0) breaks=0;
+       cout<<(x*y)+(breaks*z)<<endl;
     }
     return 0;
     
