@@ -1,3 +1,6 @@
+
+// https://codeforces.com/problemset/problem/1543/B
+
 #include <bits/stdc++.h>
 using namespace std;
 #define fastIO                    \
@@ -11,16 +14,16 @@ int main()
     cin>>t;
     while(t--)
     {
-        int x,y,n,r,ans=0;
-        cin>>x>>y>>n>>r;
-        if(x*n>r) cout<<-1<<endl;
-        else if(y*n<=r) cout<<0<<" "<<n<<endl;
-        else
+        int n;
+        cin>>n;
+        long long int ans,sum=0,temp;
+        for(int i=0;i<n;i++)
         {
-            ans=(r-(n*x))/(y-x);
-            cout<<n-ans<<" "<<ans<<endl;
+            cin>>temp;
+            sum=sum+temp;
         }
-        
+        cout<<(sum%n)*(n-(sum%n))<<endl;
+
     }
     return 0;
     

@@ -11,18 +11,12 @@ int main()
     cin>>t;
     while(t--)
     {
-        int i,n,flag=0;
+        long long int n;
+        int flag=0;
         cin>>n;
-        string s,s1,s2;
-        cin>>s;
-        for( i=0;i<n;i++)
-        {
-            if(i%2==0) s1.push_back(s[i]);
-            else s2.push_back(s[i]);
-        }
-        sort(s1.begin(),s1.end());
-        sort(s2.begin(),s2.end());
-        if(!s1.compare(s2)) cout<<"YES"<<endl;
+        int c2021=n%2020;
+        int c2020= (n-2021*c2021)/2020;
+        if(c2020>=0) cout<<"YES"<<endl;
         else cout<<"NO"<<endl;
     }
     return 0;
